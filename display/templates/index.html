@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="static/index.css">
+</head>
+<body>
+    <div>
+        <a href="/startSpider">
+            <button>Start Spider</button>
+        </a>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Text</th>
+                    <th>Author</th>
+                    <th>Tags</th>
+                    <th>Author Born Date</th>
+                    <th>Author Born Location</th>
+                    <th>Author Description</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for item in data_list %}
+                <tr>
+                    <td>{{item.id}}</td>
+                    <td>{{item.text}}</td>
+                    <td>{{item.author}}</td>
+                    <td>{{item.tags}}</td>
+                    <td>{{item.author_born_date}}</td>
+                    <td>{{item.author_born_location}}</td>
+                    <td>{{item.author_description}}</td>
+                </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+
+    </div>
+</body>
+</html>
